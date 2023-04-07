@@ -13,7 +13,6 @@ jobs:
       - name: Install
         run: |
               npm install
-              npm audit fix --force
               npm i -g serverless
       - name: Invoke
         run: sls invoke local -f harvey   
