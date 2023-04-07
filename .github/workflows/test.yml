@@ -7,6 +7,10 @@ jobs:
   run_sls:
     name: SLS
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [12.x]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
