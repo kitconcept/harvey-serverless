@@ -6,10 +6,6 @@ plugins:
 provider:
   name: aws
   runtime: nodejs12.x
-  environment:
-    HARVEST_ACCOUNT_ID: ${{ secrets.ID }}
-    HARVEST_AUTHORIZATION_TOKEN: ${{ secrets.TOKEN }}
-    SLACK_WEBHOOK_URL: ${{ secrets.HOOK }}
 
 functions:
   harvey:
