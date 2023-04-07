@@ -1,7 +1,7 @@
 name: Test
 on:
   schedule:
-    - cron: '30 * * * 5'
+    - cron: '35 * * * *'
 env:
   HARVEST_ACCOUNT_ID: ${{ secrets.ID }}
   HARVEST_AUTHORIZATION_TOKEN: ${{ secrets.TOKEN }}
