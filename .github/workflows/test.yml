@@ -11,6 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install
-        run: npm install
+        run: |
+              npm config set prefix /usr/local
+              npm install
+              npm i -g serverless
       - name: Invoke
         run: sls invoke local -f harvey   
