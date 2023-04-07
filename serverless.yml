@@ -1,0 +1,19 @@
+service: harvey
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  environment:
+    HARVEST_ACCOUNT_ID: ${{ secrets.ID }}
+    HARVEST_AUTHORIZATION_TOKEN: ${{ secrets.TOKEN }}
+    SLACK_WEBHOOK_URL: ${{ secrets.HOOK }}
+
+functions:
+  harvey:
+    handler: src/bootstrap.handle
+    events:
+      - schedule: cron(0 1 ? * SAT *)
+        
