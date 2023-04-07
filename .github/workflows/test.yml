@@ -15,5 +15,6 @@ jobs:
               npm config set prefix /usr/local
               npm install
               npm i -g serverless
+              npm audit fix --force
       - name: Invoke
         run: sls invoke local -f harvey   
