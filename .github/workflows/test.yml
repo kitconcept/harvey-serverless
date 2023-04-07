@@ -20,4 +20,4 @@ jobs:
               npm install
               npm i -g serverless
       - name: Invoke
-        run: sls invoke local -f harvey   
+        run: sls invoke local -f harvey
