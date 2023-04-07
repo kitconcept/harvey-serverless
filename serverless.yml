@@ -10,6 +10,4 @@ provider:
 functions:
   harvey:
     handler: src/bootstrap.handle
-    events:
-      - schedule: cron(0 1 ? * SAT *)
         

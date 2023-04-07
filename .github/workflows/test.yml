@@ -1,8 +1,7 @@
 name: Test
 on:
-  push:
-    branches:
-      - 'master'
+  schedule:
+    - cron: '30 * * * 5'
 env:
   HARVEST_ACCOUNT_ID: ${{ secrets.ID }}
   HARVEST_AUTHORIZATION_TOKEN: ${{ secrets.TOKEN }}
