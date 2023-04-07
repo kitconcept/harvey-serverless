@@ -8,8 +8,9 @@ jobs:
     name: SLS
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Install
-        run: echo "npm install"
+        run: npm install
       - name: Invoke
-        run: echo "sls invoke local -f harvey"
-   
+        run: sls invoke local -f harvey   
