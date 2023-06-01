@@ -1,7 +1,10 @@
-name: Test
+name: Notify
+
 on:
   schedule:
-    - cron: '16 * * * *'
+    - cron: '15 9 * * WED,FRI'
+  workflow_dispatch:
+
 env:
   HARVEST_ACCOUNT_ID: ${{ secrets.ID }}
   HARVEST_AUTHORIZATION_TOKEN: ${{ secrets.TOKEN }}
